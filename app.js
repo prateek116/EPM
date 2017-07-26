@@ -9,10 +9,13 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+var fs = require('fs');
+var multer = require('multer');
 
 
 var User = require('./models/user.js');
 var Project = require('./models/project');
+var Image = require('./models/image');
 
 var sessionUser = null;
 
@@ -20,6 +23,8 @@ mongoose.connect('mongodb://localhost/EPM');
 
 
 var app = express();
+
+app.use( express.static(path.join(__dirname, 'uploads')))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -37,9 +42,9 @@ app.use(passport.session());
 
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
-      var namespace = param.split('.')
-      , root    = namespace.shift()
-      , formParam = root;
+    var namespace = param.split('.')
+    , root    = namespace.shift()
+    , formParam = root;
 
     while(namespace.length) {
       formParam += '[' + namespace.shift() + ']';
@@ -245,7 +250,9 @@ app.get('/loggedIn',function(req,res){
 
 
 app.get('/options',function(req,res){
-  res.render('options');
+  res.render('options',{
+    user: sessionUser
+  });
 });
 
 
@@ -385,6 +392,21 @@ app.post('/assignProject',function(req,res){
 
 
 
+var upload = multer({dest: 'uploads/'});
+
+app.get('/uploadImage',function(req,res){
+  res.render('uploadImage');
+});
+
+app.post('/uploadImage',upload.single('myImage'),function(req,res){
+  sessionUser.imageUrl = req.file.filename;
+  sessionUser.save(function(err){
+    if(err) throw err;
+    else console.log("url saved");
+    res.send('Image Uploaded')
+  });
+
+});
 
 app.get('/logout',function(req,res){
   req.logout();

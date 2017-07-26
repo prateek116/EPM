@@ -10,15 +10,17 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "*",
-    "cookie-parser": "^1.4.1",
     "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.1",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-messages": "*",
     "express-session": "^1.15.4",
     "express-validator": "^3.2.1",
+    "fs": "0.0.1-security",
     "mongojs": "^2.4.0",
     "mongoose": "^4.11.3",
+    "multer": "^1.3.0",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*"

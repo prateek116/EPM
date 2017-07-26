@@ -10,7 +10,8 @@ var userSchema = new Schema({
 	webSkill: Number,
   androidSkill: Number,
   iosSkill: Number,
-  iotSkill: Number 
+  iotSkill: Number,
+  imageUrl: String 
 });
 
 /*userSchema.pre('save', function(next,done) {

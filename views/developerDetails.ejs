@@ -1,10 +1,20 @@
 <% include partials/header %>
+	
 	<ul>
+	<% if(developerSkills.imageUrl == null)
+	{%>
+		<a href = http://localhost:3000/uploadImage > Upload Profile Picture </a>
+	<br> 
+	<%}
+	else{%>
+		<img src = "<%=developerSkills.imageUrl%>" alt = 'profile picture'>
+	<%}%>
+
 	<h1>Your Skills</h1>
-		<p> Web Skills - <%= developerSkills.web %> </p>
-		<p> Android Skills - <%= developerSkills.android %> </p>
-		<p> IOS Skills - <%= developerSkills.ios %> </p>
-		<p> IOT Skills - <%= developerSkills.iot %> </p>
+		<p> Web Skills - <%= developerSkills.webSkill %> </p>
+		<p> Android Skills - <%= developerSkills.androidSkill %> </p>
+		<p> IOS Skills - <%= developerSkills.iosSkill %> </p>
+		<p> IOT Skills - <%= developerSkills.iotSkill %> </p>
 
 	<h1>Current Project</h1>
 

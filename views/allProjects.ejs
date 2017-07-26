@@ -1,6 +1,6 @@
 <% include partials/header %>
 
- 	<h1>Ongoing Projects</h1>
+ 	<h1>Ongoing Projects</h1><hr>
  	<ul>
 	<% ongoingProjects.forEach(function(project){%>
 		<p> Project Name - <%= project.name %> </p>
@@ -29,14 +29,13 @@
 		<p> IOS Skills Needed- <%= project.skillsNeeded.ios %> </p>
 		<p> IOT Skills Needed- <%= project.skillsNeeded.iot %> </p>
 
-		<br><br><br>
+		<br><br><br> <hr>
 	<%})%>
 
 	</ul>
 
-
-	<h1>Completed Projects</h1>
- 	<ul>
+	<ul>
+	<h1>Completed Projects</h1><hr>
 	<% completedProjects.forEach(function(project){%>
 		<p> Project Name - <%= project.name %> </p>
 		<br>
@@ -64,7 +63,7 @@
 		<p> IOS Skills - <%= project.skillsNeeded.ios %> </p>
 		<p> IOT Skills - <%= project.skillsNeeded.iot %> </p>
 
-		<br><br><br>
+		<br><br><br> <hr>
 	<%})%>
 
 	</ul>

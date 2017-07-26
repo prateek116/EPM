@@ -1,11 +1,22 @@
 <% include partials/header %>
 
+	<% if(user.imageUrl == null)
+	{%>
+		<a href = http://localhost:3000/uploadImage > Upload Profile Picture </a>
+	<br> 
+	<%}
+	else{%>
+		<img src = "<%=user.imageUrl%>" alt = 'profile picture'><br>
+	<%}%>
 
+	
 	<a href = 'http://localhost:3000/createProject'> Create New Project </a>
 	<br>
 	<a href = 'http://localhost:3000/allProjects'> All Projects </a>
 	<br>
 	<a href = '/assignProject'> Assign Projects </a>
+
+	
 
 
 <% include partials/footer %>
