@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+	<form method = "POST" action = "/users/add">
+
+		<label>Email</label><br>
+		<input type="text" name = "email">
+		<br>
+
+		<label>Role</label><br>
+		<input type="text" name = "role">
+		<br>
+
+		<label>Password</label><br>
+		<input type="text" name = "password">
+		<br>
+
+		<label>Reenter Password</label><br>
+		<input type="text" name = "password1">
+		<br>
+
+		<p> Enter Your Skills From 0 to 5 (Integer) </p>
+
+		<label>Web</label><br>
+		<input type="text" name = "web"> <br>
+
+		<label>Android</label><br>
+		<input type="text" name = "android"> <br>
+
+		<label>IOS</label><br>
+		<input type="text" name = "ios">
+		<br>
+
+		<label>IOT</label><br>
+		<input type="text" name = "iot">
+		<br>
+
+		<input type = "submit" value="Submit">
+
+	</form>
+
+<% include partials/footer %>
+

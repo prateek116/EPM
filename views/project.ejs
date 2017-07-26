@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+	
+	<form method = "POST" action = "/createProject">
+
+		<label>Name</label><br>
+		<input type="text" name = "name"> <br>
+
+		<label>Description</label><br>
+		<input type="text" name = "description"> <br>
+
+		<label>Start Time</label><br>
+		<input type="text" name = "start_time"> <br>
+
+		<label>Deadline</label><br>
+		<input type="text" name = "deadline"> <br>
+
+		<label>Status</label><br>
+		<input type="text" name = "status"> <br>
+
+		<p> Skills Needed from 0 to 5 (Integer) </p>
+
+		<label>Web</label><br>
+		<input type="text" name = "web"> <br>
+
+		<label>Android</label><br>
+		<input type="text" name = "android"> <br>
+
+		<label>IOS</label><br>
+		<input type="text" name = "ios">
+		<br>
+
+		<label>IOT</label><br>
+		<input type="text" name = "iot">
+		<br>
+		<br>
+		<input type = "submit" value="Submit">
+
+	</form>
+
+
+<% include partials/footer %>

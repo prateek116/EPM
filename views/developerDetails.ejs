@@ -1,0 +1,75 @@
+<% include partials/header %>
+	<ul>
+	<h1>Your Skills</h1>
+		<p> Web Skills - <%= developerSkills.web %> </p>
+		<p> Android Skills - <%= developerSkills.android %> </p>
+		<p> IOS Skills - <%= developerSkills.ios %> </p>
+		<p> IOT Skills - <%= developerSkills.iot %> </p>
+
+	<h1>Current Project</h1>
+
+	<% currentProject.forEach(function(project){%>
+		<p> Project Name - <%= project.name %> </p>
+		<br>
+		<p> Project Description -  <%= project.description %> </p>
+		<br>
+		<p> Start Date - <%= project.startTime %> </p>
+		<br>
+		<p> Deadline - <%= project.deadline %> </p>
+		<br>
+		<p> ManagerEmail - <%= project.managerEmail %> </p>
+		<br>
+
+		<p> developerEmail - <% if(project.developerEmail == null)
+		{%>
+			<p> no developer is assigned </p>
+		<%} 
+		else{%>
+			<%= project.developerEmail %>
+		<%}
+		%> </p>
+		<br> 
+
+		<p> Web Skills Needed - <%= project.skillsNeeded.web %> </p>
+		<p> Android Skills Needed- <%= project.skillsNeeded.android %> </p>
+		<p> IOS Skills Needed- <%= project.skillsNeeded.ios %> </p>
+		<p> IOT Skills Needed- <%= project.skillsNeeded.iot %> </p>
+
+		<br><br><br>
+	<%})%>
+
+	<h1> Projects History </h1>
+
+		<% projectHistory.forEach(function(project){%>
+		<p> Project Name - <%= project.name %> </p>
+		<br>
+		<p> Project Description -  <%= project.description %> </p>
+		<br>
+		<p> Start Date - <%= project.startTime %> </p>
+		<br>
+		<p> Deadline - <%= project.deadline %> </p>
+		<br>
+		<p> ManagerEmail - <%= project.managerEmail %> </p>
+		<br>
+
+		<p> developerEmail - <% if(project.developerEmail == null)
+		{%>
+			<p> no developer is assigned </p>
+		<%} 
+		else{%>
+			<%= project.developerEmail %>
+		<%}
+		%> </p>
+		<br> 
+
+		<p> Web Skills Needed - <%= project.skillsNeeded.web %> </p>
+		<p> Android Skills Needed- <%= project.skillsNeeded.android %> </p>
+		<p> IOS Skills Needed- <%= project.skillsNeeded.ios %> </p>
+		<p> IOT Skills Needed- <%= project.skillsNeeded.iot %> </p>
+
+		<br><br><br>
+	<%})%>
+
+	</ul>
+
+<% include partials/footer %>

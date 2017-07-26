@@ -1,0 +1,26 @@
+{
+  "name": "epm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "prateek",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "*",
+    "cookie-parser": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-messages": "*",
+    "express-session": "^1.15.4",
+    "express-validator": "^3.2.1",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.11.3",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

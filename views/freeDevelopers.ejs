@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+ 	<h1>Free Employees</h1>
+ 	<ul>
+	<% freeDevelopers.forEach(function(developer){%>
+		<p> Developer Email - <%= developer.email %> </p>
+		<br>
+		<p> Web Skills -  <%= developer.webSkill %> </p>
+		<br>
+		<p> Android Skills - <%= developer.androidSkill %> </p>
+		<br>
+		<p> Ios Skills - <%= developer.iosSkill %> </p>
+		<br>
+		<p> Iot Skills - <%= developer.iotSkill %> </p>
+		<br><br><br>
+	<%})%>
+
+	<form method = "POST" action = "/assignProject">
+
+		<label>Assign Project</label>
+		<input type="text" name = "name">
+		<label> To </label>
+		<input type = "text" name = "email">
+		<br>
+		<input type = "submit" value="Submit">
+
+	</form>
+	</ul>
+<% include partials/footer %>

@@ -1,0 +1,73 @@
+<% include partials/header %>
+
+ 	<h1>Ongoing Projects</h1>
+ 	<ul>
+	<% ongoingProjects.forEach(function(project){%>
+		<p> Project Name - <%= project.name %> </p>
+		<br>
+		<p> Project Description -  <%= project.description %> </p>
+		<br>
+		<p> Start Date - <%= project.startTime %> </p>
+		<br>
+		<p> Deadline - <%= project.deadline %> </p>
+		<br>
+		<p> ManagerEmail - <%= project.managerEmail %> </p>
+		<br>
+
+		<p> developerEmail - <% if(project.developerEmail == null)
+		{%>
+			<p> no developer is assigned </p>
+		<%} 
+		else{%>
+			<%= project.developerEmail %>
+		<%}
+		%> </p>
+		<br> 
+
+		<p> Web Skills Needed - <%= project.skillsNeeded.web %> </p>
+		<p> Android Skills Needed- <%= project.skillsNeeded.android %> </p>
+		<p> IOS Skills Needed- <%= project.skillsNeeded.ios %> </p>
+		<p> IOT Skills Needed- <%= project.skillsNeeded.iot %> </p>
+
+		<br><br><br>
+	<%})%>
+
+	</ul>
+
+
+	<h1>Completed Projects</h1>
+ 	<ul>
+	<% completedProjects.forEach(function(project){%>
+		<p> Project Name - <%= project.name %> </p>
+		<br>
+		<p> Project Description -  <%= project.description %> </p>
+		<br>
+		<p> Start Date - <%= project.startTime %> </p>
+		<br>
+		<p> Deadline - <%= project.deadline %> </p>
+		<br>
+		<p> ManagerEmail - <%= project.managerEmail %> </p>
+		<br>
+
+		<p> developerEmail - <% if(project.developerEmail == null)
+		{%>
+			<p> no developer is assigned </p>
+		<%} 
+		else{%>
+			<%= project.developerEmail %>
+		<%}
+		%> </p>
+		<br> 
+
+		<p> Web Skills - <%= project.skillsNeeded.web %> </p>
+		<p> Android Skills - <%= project.skillsNeeded.android %> </p>
+		<p> IOS Skills - <%= project.skillsNeeded.ios %> </p>
+		<p> IOT Skills - <%= project.skillsNeeded.iot %> </p>
+
+		<br><br><br>
+	<%})%>
+
+	</ul>
+
+
+<% include partials/footer %>
