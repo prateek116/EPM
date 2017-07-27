@@ -45,7 +45,7 @@ var showOff = function (phone) {
 };
 
 
-/*  var userNotRepeated = new Promise(
+  var userNotRepeated = new Promise(
     function(resolve,reject){
       User.find({email: req.body.email},function(err,users){
         if (err) throw err;
@@ -96,4 +96,4 @@ var showOff = function (phone) {
 
 userNotRepeated.then(addUser(errors)).then(function(message){
   console.log(message);
-})*/
+})

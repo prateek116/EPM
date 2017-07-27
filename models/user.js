@@ -1,9 +1,8 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var skill = new Schema({name: Number});
 
-var userSchema = new Schema({
+const userSchema = new Schema({
 	email: {type: String},
 	role: String,
 	password: String,
@@ -32,5 +31,5 @@ var userSchema = new Schema({
   next();
 });*/
 
-var user = mongoose.model('user',userSchema);
-module.exports = user;
+let user = mongoose.model('user',userSchema);
+export {user};
